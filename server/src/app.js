@@ -1,5 +1,4 @@
-const express = require("express");
-const morgan = require("morgan");
+const express = require("express");;
 const cors = require("cors");
 const path = require("path");
 const api = require("./routes/api");
@@ -12,7 +11,6 @@ app.use(
   })
 );
 
-app.use(morgan("combined"));
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
